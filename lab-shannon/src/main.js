@@ -1,12 +1,15 @@
 'use strict';
 
-const main = require('./src/main');
+import './src/main.js'
+import React from 'react'
+import ReactDom from 'react-dom'
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
     this.state.content = this.props.content;
+    this.generateCowsay = this.generateCowsay.bind(this);
   }
 }
 
@@ -23,3 +26,5 @@ function generateCowsay() => {
     );
   }
 // }
+
+ReactDom.render(<App/>, document.getElementById('root'));
