@@ -6,11 +6,11 @@ const ExtractPlugin = require('extract-text-webpack-plugin');
 module.exports = {
   entry: `${__dirname}/src/main.js`,
   output: {
-    path: `${__dirname}/dist`,
+    path: `${__dirname}/build`,
     filename: 'bundle.js',
   },
   plugins: [
-    new HTMLPlugin({template: `${__dirname}/src/index.html}`}),
+    new HTMLPlugin({template: `${__dirname}/src/index.html`}),
     new ExtractPlugin('bundle.js'),
   ],
   module: {

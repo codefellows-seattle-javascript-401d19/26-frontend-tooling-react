@@ -4,6 +4,8 @@
   "description": "using react and webpack to build a ui for cowsay",
   "main": "main.js",
   "scripts": {
+    "build": "webpack",
+    "watch": "webpack-dev-server --inline --hot",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "shannon",

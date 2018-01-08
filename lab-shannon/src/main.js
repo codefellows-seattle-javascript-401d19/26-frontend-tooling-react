@@ -1,5 +1,3 @@
-'use strict';
-
 // import './src/main.scss'
 import React from 'react'
 import ReactDom from 'react-dom'
@@ -7,9 +5,15 @@ import ReactDom from 'react-dom'
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
-    this.state.content = this.props.content;
+    this.state = {
+      content: '',
+    };
+    // this.state.content = this.props.content;
     this.generateCowsay = this.generateCowsay.bind(this);
+  }
+
+  generateCowsay() {
+
   }
 
   render() {
@@ -23,10 +27,10 @@ class App extends React.Component {
   }
 }
 
-function generateCowsay() => {
-//create a new div
-//fill it with text
-//add it to the page
-}
+// function generateCowsay = () => {
+// //create a new div
+// //fill it with text
+// //add it to the page
+// }
 
 ReactDom.render(<App/>, document.getElementById('root'));
