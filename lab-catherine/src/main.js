@@ -10,7 +10,6 @@ class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      title: 'Good Day Cowsay',
       content: 'What do you say cowsay?',
     }
 
@@ -19,7 +18,7 @@ class App extends React.Component {
 
   handleClick() {
     this.setState((state) => {
-      return {
+      return {      
         content: faker.random.words()
       }
     })
@@ -29,7 +28,7 @@ class App extends React.Component {
     return (
       <div>
         <header className='cowsay-hello'>
-        <h1>Generate Cowsay Lorem</h1>
+          <h1>Generate Cowsay Lorem</h1>
         </header>
         <button onClick ={this.handleClick}>clickity click</button>
         <pre>{cowsay.say({text: this.state.content})}</pre>
