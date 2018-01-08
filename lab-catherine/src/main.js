@@ -6,19 +6,6 @@ import ReactDom from 'react-dom'
 import cowsay from 'cowsay-browser'
 import faker from 'faker'
 
-class Cow extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    return (
-      <header className='cowsay-hello'>
-        <h1>Generate Cowsay Lorem</h1>
-      </header>
-    );
-  }
-}
 class App extends React.Component {
   constructor(props) {
     super(props)
@@ -41,9 +28,11 @@ class App extends React.Component {
   render() {
     return (
       <div>
-      <Cow/>
-      <button onClick ={this.handleClick}>clickity click</button>
-      <pre>{cowsay.say({text: this.state.content})}</pre>
+        <header className='cowsay-hello'>
+        <h1>Generate Cowsay Lorem</h1>
+        </header>
+        <button onClick ={this.handleClick}>clickity click</button>
+        <pre>{cowsay.say({text: this.state.content})}</pre>
       </div>
     )
   }
