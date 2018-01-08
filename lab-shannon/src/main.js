@@ -20,8 +20,7 @@ function generateCowsay() => {
 // class App extends React.Component {
   render() {
     return (
-      <h1>Generate Cowsay Lorem</h1>
-      <button onClicke={generateCowsay}>Click Me</button>
+      <button onClick={generateCowsay}>Click Me</button>
       <pre>{App.state.content}</pre>
     );
   }
