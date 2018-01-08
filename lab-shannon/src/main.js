@@ -1,6 +1,6 @@
 'use strict';
 
-import './src/main.js'
+// import './src/main.scss'
 import React from 'react'
 import ReactDom from 'react-dom'
 
@@ -14,7 +14,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className = 'app'>
         <h1>Generate Cowsay Lorem</h1>
         <button onClick={generateCowsay}>Click Me</button>
         <pre>{App.state.content}</pre>
