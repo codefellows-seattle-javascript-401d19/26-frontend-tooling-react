@@ -11,19 +11,22 @@ class App extends React.Component {
     this.state.content = this.props.content;
     this.generateCowsay = this.generateCowsay.bind(this);
   }
+
+  render() {
+    return (
+      <div>
+        <h1>Generate Cowsay Lorem</h1>
+        <button onClick={generateCowsay}>Click Me</button>
+        <pre>{App.state.content}</pre>
+      </div>
+    );
+  }
 }
 
 function generateCowsay() => {
-
+//create a new div
+//fill it with text
+//add it to the page
 }
-
-// class App extends React.Component {
-  render() {
-    return (
-      <button onClick={generateCowsay}>Click Me</button>
-      <pre>{App.state.content}</pre>
-    );
-  }
-// }
 
 ReactDom.render(<App/>, document.getElementById('root'));
