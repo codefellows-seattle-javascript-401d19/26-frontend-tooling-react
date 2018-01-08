@@ -1,8 +1,9 @@
 $background-color: #a5e7c4;
+$text-color: goldenrod;
 
-.html {
+
+body {
+  color: $text-color;
   background-color: $background-color;
 }
-
-
 
