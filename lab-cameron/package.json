@@ -7,6 +7,8 @@
     "lib": "lib"
   },
   "scripts": {
+    "watch": "webpack-dev-server --inline --hot",
+    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -38,6 +40,8 @@
     "webpack-dev-server": "^2.10.0"
   },
   "dependencies": {
+    "cowsay": "^1.2.1",
+    "faker": "^4.1.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   }
