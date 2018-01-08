@@ -3,13 +3,13 @@ const HTMLPlugin = require('html-webpack-plugin');
 const ExtractPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-  entry: "`${__dirname}/src/main.js",
+  entry: `${__dirname}/src/main.js`,
 
   output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "bundle.js",
-    publicPath: "/assets/",
-    library: "MyLibrary",
+    path: path.resolve(`${__dirname}/build`),
+    filename: "bundle.[hash].js",
+    // publicPath: "/assets/",
+    // library: "MyLibrary",
   },
   plugins: [
     new HTMLPlugin({template: `${__dirname}/src/index.html`}),

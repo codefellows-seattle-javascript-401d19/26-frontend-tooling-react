@@ -38,11 +38,13 @@ class App extends React.Component {
     <title>Generate Cowsay Lorem</title>
     return (
       <div>
-      (Cowsay.say({
+      ({
+        Cowsay.say({
         text : "click me for mooooore",
         e : "oO",
         T : "U "
       })
+    }
       </div>
     )
   }
