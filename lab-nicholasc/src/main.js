@@ -25,7 +25,7 @@ class App extends React.Component {
   render() {
     return (<button className={'cowsays'}
     onClick={this.saysSomethingNew}>
-      <p className="speech">{this.state.content}</p>
+      <pre>{this.state.content}</pre>
     </button>)
   }
 }
