@@ -1,12 +1,13 @@
 {
-  "name": "Lab 26 Cowsay",
+  "name": "lab-26-cowsay",
   "version": "1.0.0",
   "description": "webpackage and react beginnings",
   "main": "index.js",
   "scripts": {
     "test": "jest -i --coverage",
     "dbon": "mkdir -p ./db && mongod --dbpath ./db",
-    "dboff": "killall mongod"
+    "dboff": "killall mongod",
+    "watch": "webpack-dev-server --inline --hot"
   },
   "keywords": [],
   "author": "Seth Donohue",
@@ -19,6 +20,7 @@
     "babel-preset-react": "^6.24.1",
     "bcrypt": "^1.0.3",
     "body-parser": "^1.18.2",
+    "cowsay": "^1.2.1",
     "css-loader": "^0.28.8",
     "dotenv": "^4.0.0",
     "express": "^4.16.2",
