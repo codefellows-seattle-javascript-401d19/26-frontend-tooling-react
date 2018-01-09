@@ -3,51 +3,37 @@
 import './style/main.scss'
 import React from 'react'
 import ReactDom from 'react-dom'
-import Cowsay from 'cowsay'
+import {say} from 'cowsay'
+import faker from 'faker'
 
 class Cowsayer extends React.Component {
   constructor(props) {
     super(props)
 
     this.state = {};
-    this.state.value = this.props.value;
-    this.state.content = this.props.content;
+    this.state.content = say({text: 'click me for mooooore'});
 
-    this.increment = this.increment.bind(this)
+    this.saySomething = this.saySomething.bind(this)
   }
 
   saySomething() {
-    let newPhrase = faker.company.bs();
+    let newPhrase = say({text: faker.company.bs(5)});
 
-    this.setState({value: newPhrase})
+    console.log(say({text: 'faker.company.bs(5)'}));
+
+    this.setState({content: newPhrase});
   }
 
   render() {
     return (
       <div>
-      <button onClick={this.saySomething}>
-      Click me
-      </button>
-      </div>
+        <button className ="text-xs font-semibold rounded-full px-4 py-1 leading-normal bg-white border border-purple text-purple hover:bg-purple hover:text-white" onClick={() => this.saySomething()}> Click me </button>
+        <pre>{this.state.content}
+        </pre>
+    </div>
     )
   }
 }
 
-class App extends React.Component {
-  render() {
-    <title>Generate Cowsay Lorem</title>
-    return (
-      <div>
-      ({
-        Cowsay.say({
-        text : "click me for mooooore",
-        e : "oO",
-        T : "U "
-      })
-    }
-      </div>
-    )
-  }
-}
 
-ReactDom.render(<App/>, document.getElementById('anchor'))
+ReactDom.render(<Cowsayer/>, document.getElementById('anchor'))
