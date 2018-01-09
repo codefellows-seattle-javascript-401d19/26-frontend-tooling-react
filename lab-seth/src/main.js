@@ -28,7 +28,7 @@ class Cowsay extends React.Component {
 
   render() {
     return (
-      <div className='cowsay'>
+      <div>
       <button onClick={() => this.changeSaying()}> Click Here to Say the Cow</button>
       <pre>{this.state.content}</pre>
       </div>
@@ -39,7 +39,9 @@ class Cowsay extends React.Component {
 class App extends React.Component {
   render() {
     return (
-      <Cowsay/>
+      <div>
+        <Cowsay />
+      </div>
     )
   }
 }
