@@ -3,7 +3,7 @@
 import './style/main.scss';
 import React from 'react';
 import ReactDom from 'react-dom';
-import { say } from 'cowsay';
+import * as cowsay from 'cowsay';
 import faker from 'faker';
 
 class Cowsay extends React.Component {
@@ -11,7 +11,7 @@ class Cowsay extends React.Component {
     super(props);
 
     this.state = {};
-    this.state.content = say({
+    this.state.content = cowsay.say({
       text: `I am a cow and I will ${faker.hacker.verb(2)} your phone to ${faker.hacker.adjective(2)}!` ,
     });
     console.log(this.state);
@@ -20,7 +20,7 @@ class Cowsay extends React.Component {
 
   changeSaying() {
     this.setState({
-      content: say({
+      content: cowsay.say({
         text: `I am a cow and I will ${faker.hacker.verb(2)} your phone to ${faker.hacker.adjective(2)}!`,
       })
     })
