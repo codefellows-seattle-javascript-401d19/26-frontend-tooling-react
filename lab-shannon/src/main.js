@@ -1,6 +1,6 @@
 // import './src/main.scss'
-import React from 'react'
-import ReactDom from 'react-dom'
+import React from 'react';
+import ReactDom from 'react-dom';
 
 class App extends React.Component {
   constructor(props) {
@@ -9,18 +9,19 @@ class App extends React.Component {
       content: '',
     };
 
-    this.generateText = this.generateText.bind(this)
+    this.generateText = this.generateText.bind(this);
   }
 
   generateText() {
-    this.setState({content: 'groot'})
+    this.setState({content: 'groot'});
+    console.log(this.state);
   }
 
   render() {
     return (
       <div>
         <h1>Generate Cowsay Lorem</h1>
-        <button onClick={generateText}>Click Me</button>
+        <button onClick={this.generateText}>Click Me</button>
       </div>
     );
   }
