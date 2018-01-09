@@ -30,8 +30,9 @@ class App extends React.Component {
         <header className='cowsay-hello'>
           <h1>Generate Cowsay Lorem</h1>
         </header>
-        <button onClick ={this.handleClick}>clickity click</button>
+        <button onClick ={this.handleClick}>click me</button>
         <pre>{cowsay.say({text: this.state.content})}</pre>
+        <li>Catherine Looper<a href="https://github.com/ccloops" target="blank"><img src="../asset/ghicon.png"/></a></li>
       </div>
     )
   }
