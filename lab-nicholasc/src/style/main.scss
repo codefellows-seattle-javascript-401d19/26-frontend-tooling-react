@@ -1,0 +1,14 @@
+$cow-color: blue;
+
+.cowsays {
+  background-color: orange;
+  height: 500px;
+  width: 600px;
+  border:solid $cow-color 5px;
+
+  .speech {
+    color : $cow-color;
+    font-size: 1.5em;
+  }
+
+}

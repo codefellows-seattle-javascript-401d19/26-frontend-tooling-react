@@ -1,0 +1,36 @@
+'use strict';
+
+import './style/main.scss';
+import React from 'react';
+import ReactDom from 'react-dom';
+import {say} from 'cowsay';
+import faker from 'faker';
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+    this.state.content = say({
+      text : `I am a Liar, Cows say : ${faker.lorem.words(10)}`
+    });
+    this.saysSomethingNew = this.saysSomethingNew.bind(this);
+  }
+
+  saysSomethingNew() {
+    let says = say({
+      text : `I know a man named Nicholas, did you know he ${faker.lorem.words(10)}`
+    });
+
+    this.setState({content: says});
+  }
+
+  render() {
+    return (<button className={'cowsays'}
+    onClick={this.saysSomethingNew}>
+      <p className="speech">{this.state.content}</p>
+    </button>)
+  }
+}
+
+
+ReactDom.render(<App/>, document.getElementById('main'))
