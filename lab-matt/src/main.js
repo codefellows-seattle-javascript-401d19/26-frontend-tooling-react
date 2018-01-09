@@ -43,7 +43,7 @@ class App extends React.Component {
     return (
       <div>
         <h1>Generate Cowsay Lorem</h1>
-        <Cow content={faker.hacker.phrase()} />
+        <Cow content='Click the Button To Randomize My Text' />
       </div>
     )
   }
