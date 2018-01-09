@@ -8,29 +8,22 @@ class App extends React.Component {
     this.state = {
       content: '',
     };
-    // this.state.content = this.props.content;
-    this.generateCowsay = this.generateCowsay.bind(this);
+
+    this.generateText = this.generateText.bind(this);
   }
 
-  generateCowsay() {
-
+  generateText() {
+    this.setState({content: 'groot'})
   }
 
   render() {
     return (
-      <div className = 'app'>
+      <div>
         <h1>Generate Cowsay Lorem</h1>
-        <button onClick={generateCowsay}>Click Me</button>
-        <pre>{App.state.content}</pre>
+        <button onClick={generateText}>Click Me</button>
       </div>
     );
   }
 }
 
-// function generateCowsay = () => {
-// //create a new div
-// //fill it with text
-// //add it to the page
-// }
-
-ReactDom.render(<App/>, document.getElementById('root'));
+ReactDom.render(<App />, document.getElementById('root'));
