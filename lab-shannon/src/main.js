@@ -9,7 +9,7 @@ class App extends React.Component {
       content: '',
     };
 
-    this.generateText = this.generateText.bind(this);
+    this.generateText = this.generateText.bind(this)
   }
 
   generateText() {
