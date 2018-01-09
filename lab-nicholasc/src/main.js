@@ -10,9 +10,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
-    this.state.content = say({
-      text : `I am a Liar, Cows say : ${faker.lorem.words(10)}`
-    });
+    this.state.content = 'click me';
     this.saysSomethingNew = this.saysSomethingNew.bind(this);
   }
 
