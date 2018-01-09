@@ -1,4 +1,4 @@
-// import './src/main.scss'
+// import './style/main.scss';
 import React from 'react';
 import ReactDom from 'react-dom';
 import faker from 'faker';
@@ -9,11 +9,13 @@ class App extends React.Component {
     super(props);
     this.state = {
       content: say({
-        text: 'moo',
+        text: 'cheerio',
+        cow: STEGOSAURUS,
       }),
     };
 
     this.generateText = this.generateText.bind(this);
+    this.chooseCow = this.chooseCow.bind(this);
   }
 
   generateText() {
@@ -24,10 +26,23 @@ class App extends React.Component {
     });
   }
 
+  chooseCow(event) {
+    this.setState({content: say({
+      text: faker.lorem.words(5),
+      cow: event.target.value,
+    }),
+    });
+  }
+
   render() {
     return (
       <div>
         <h1>Generate Cowsay Lorem</h1>
+        <select value={this.state.value} onChange={this.chooseCow}>
+          <option value="COW">cow</option>
+          <option value="SQUIRREL">squirrel</option>
+          <option value="STEGOSAURUS">stegosaurus</option>
+        </select>
         <button onClick={this.generateText}>Click Me</button>
         <pre>{this.state.content}</pre>
       </div>
