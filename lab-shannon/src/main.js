@@ -2,7 +2,7 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import faker from 'faker';
-import {say} from 'cowsay';
+import {say, STEGOSAURUS} from 'cowsay';
 
 class App extends React.Component {
   constructor(props) {
@@ -19,6 +19,7 @@ class App extends React.Component {
   generateText() {
     this.setState({content: say({
       text: faker.lorem.words(5),
+      cow: STEGOSAURUS,
     }),
     });
   }
