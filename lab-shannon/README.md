@@ -2,9 +2,12 @@
 This program lets you click on a button to generate random text for an ascii stegosaurus to say.
 
 ## Set Up
+1. clone the repo into whatever directory you choose
+2. 'npm i' (to install all dependencies)
+3. 'npm run webpack' to build the page
+4. follow the link provided see the webpage
 
-
-## Functionality
+## Methods
   Click the button labeled "click me" to generate random text using faker.
 
 ## Technologies Used
