@@ -18,9 +18,18 @@ class Cowsay extends React.Component {
 
   }
 
+  changeSaying() {
+    this.setState({
+      content: say({
+        text: faker.lorem.words(5),
+      })
+    })
+  }
+
   render() {
     return (
       <div className='cowsay'>
+      <button onClick={() => this.changeSaying()}> Click Here to Say the Cow</button>
       <pre>{this.state.content}</pre>
       </div>
     );
