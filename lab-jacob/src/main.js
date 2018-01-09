@@ -15,16 +15,16 @@ class Cow extends React.Component{
     this.state.talk = faker.lorem.words(3)
     this.state.animal = say.DEFAULT
 
-    this.buttonClick = this.buttonClick.bind(this)
+    this.sayMoreClickButton = this.sayMoreClickButton.bind(this)
     this.changeCowState = this.changeCowState.bind(this)
   }
 
-  buttonClick(){
+  sayMoreClickButton(){
    this.setState({talk : faker.lorem.words(4)})
   }
 
   changeCowState(){
-    (this.setState({animal : say.DRAGON})) ? this.setState({animal : say.DEFAULT}) : this.setState({animal : say.DRAGON}) 
+   return (!this.state.animal.includes('The Whitespace Dragon')) ? this.setState({animal : say.DRAGON}) : this.setState({animal : say.DEFAULT})
   }
  
   render(){
@@ -34,7 +34,7 @@ class Cow extends React.Component{
       <pre>{say.think({text : `${this.state.talk}`,
       cow: `${this.state.animal}`
       })} </pre>
-      <button onClick = {this.buttonClick}> Say More </button>
+      <button onClick = {this.sayMoreClickButton}> Say More </button>
       <button onClick = {this.changeCowState}> Change Cow </button>
      </div>
     )
