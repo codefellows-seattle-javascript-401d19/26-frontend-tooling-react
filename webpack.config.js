@@ -11,7 +11,7 @@ module.exports = {
   },
   plugins: [
     new HTMLPlugin({template: `${__dirname}/src/index.html`}),
-    new ExtractPlugin('bundle-hash.css'),
+    new ExtractPlugin('bundle-[hash].css'),
   ],
   module: { // loaders
     rules: [
