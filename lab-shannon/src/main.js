@@ -1,6 +1,7 @@
 // import './src/main.scss'
 import React from 'react';
 import ReactDom from 'react-dom';
+import faker from 'faker';
 
 class App extends React.Component {
   constructor(props) {
@@ -13,8 +14,7 @@ class App extends React.Component {
   }
 
   generateText() {
-    this.setState({content: 'groot'});
-    console.log(this.state.content);
+    this.setState({content: faker.lorem.words(5)});
   }
 
   render() {
