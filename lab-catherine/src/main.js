@@ -14,6 +14,7 @@ class App extends React.Component {
     }
 
     this.handleClick = this.handleClick.bind(this);
+    this.createMenuItems = this.createMenuItems.bind(this);
   }
 
   handleClick() {
@@ -26,16 +27,19 @@ class App extends React.Component {
 
   createMenuItems(event) {
     if(event.target.value === 'cow')
-      setState({text: this.state.content})
+      this.setState({cow: ''})
     
     if(event.target.value === 'turtle')
-      setState({text: this.state.content, cow: cowsay.TURTLE})
+      this.setState({cow: cowsay.TURTLE})
     
-    if(event.target.value === 'kiss')
-      setState({text: this.state.content, cow: cowsay.KISS})
+    if(event.target.value === 'stegosaurus')
+      this.setState({cow: cowsay.STEGOSAURUS})
 
     if(event.target.value === 'whale')
-      setState({text: this.state.content, cow: cowsay.WHALE})
+      this.setState({cow: cowsay.WHALE})
+
+    if(event.target.value === 'squirrel')
+      this.setState({cow: cowsay.SQUIRREL})
   }
 
   render() {
@@ -45,21 +49,16 @@ class App extends React.Component {
           <h1>Generate Cowsay Lorem</h1>
         </header>
         <button onClick ={this.handleClick}>Click Me</button>
-
-  
-       
-      <select name="animals">
+      <select onChange={this.createMenuItems} name="animals">
+        <option value="select">Select One!</option>      
         <option value="cow">Cow</option>
         <option value="turtle">Turtle</option>
-        <option value="kiss">Kiss</option>
+        <option value="stegosaurus">Stegosaurus</option>
         <option value="whale">Whale</option>
+        <option value="squirrel">Squirrel</option>        
       </select>
-        <pre>{cowsay.say({text: this.state.content})}</pre>
-        <pre>{cowsay.say({text: this.state.content, cow: cowsay.TURTLE})}</pre>
-        <pre>{cowsay.say({text: this.state.content, cow: cowsay.KISS})}</pre>
-        <pre>{cowsay.say({text: this.state.content, cow: cowsay.WHALE})}</pre>
-        
-        
+        <pre>{cowsay.say({text: this.state.content, cow: this.state.cow})}</pre>
+     
         
         <li>Catherine Looper<a href="https://github.com/ccloops" target="blank"><img src="../asset/ghicon.png"/></a></li>
       </div>
