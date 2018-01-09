@@ -14,7 +14,7 @@ class App extends React.Component {
 
   generateText() {
     this.setState({content: 'groot'});
-    console.log(this.state);
+    console.log(this.state.content);
   }
 
   render() {
@@ -22,6 +22,7 @@ class App extends React.Component {
       <div>
         <h1>Generate Cowsay Lorem</h1>
         <button onClick={this.generateText}>Click Me</button>
+        <pre>{this.state.content}</pre>
       </div>
     );
   }
