@@ -2,19 +2,25 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import faker from 'faker';
+import {say} from 'cowsay';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      content: '',
+      content: say({
+        text: 'moo',
+      }),
     };
 
     this.generateText = this.generateText.bind(this);
   }
 
   generateText() {
-    this.setState({content: faker.lorem.words(5)});
+    this.setState({content: say({
+      text: faker.lorem.words(5),
+    }),
+    });
   }
 
   render() {
