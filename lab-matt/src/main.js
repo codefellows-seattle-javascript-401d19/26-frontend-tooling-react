@@ -13,15 +13,16 @@ class Cow extends React.Component {
 
     this.click = this.click.bind(this);
   }
+  
   click() {
     this.setState({content: faker.hacker.phrase()});
-    console.log(this.state.content);
   }
+
   render() {
     return (
       <div>
-         <pre className='cow'>{ say({text: this.state.content }) }</pre>
         <button onClick={this.click}>click me</button>
+        <pre className='cow'>{ say({text: this.state.content}) }</pre>
       </div>
     )
   }
