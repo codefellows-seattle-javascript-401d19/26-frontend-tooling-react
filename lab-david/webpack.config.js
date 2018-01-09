@@ -8,8 +8,6 @@ module.exports = {
   output: {
     path: path.resolve(`${__dirname}/build`),
     filename: "bundle.[hash].js",
-    // publicPath: "/assets/",
-    // library: "MyLibrary",
   },
   plugins: [
     new HTMLPlugin({template: `${__dirname}/src/index.html`}),

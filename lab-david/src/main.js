@@ -18,9 +18,6 @@ class Cowsayer extends React.Component {
 
   saySomething() {
     let newPhrase = say({text: faker.company.bs(5)});
-
-    console.log(say({text: 'faker.company.bs(5)'}));
-
     this.setState({content: newPhrase});
   }
 
