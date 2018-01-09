@@ -1,0 +1,16 @@
+html,
+body {
+  background-color: #baddad;
+  color: #00b7ff;
+}
+
+.cow {
+  font-weight: bold;
+  font-size: 20px;
+  display: block;
+  margin: 0 auto;
+}
+
+.cowBlock {
+  width: 100%;
+}
