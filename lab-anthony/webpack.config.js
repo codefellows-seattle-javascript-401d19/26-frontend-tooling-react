@@ -8,7 +8,7 @@ module.exports = {
   entry: './src/main.js',
   output: {
     path: `${__dirname}/build`,
-    filename: 'bundle.[hash].js'
+    filename: 'bundle.[hash].js',
   },
   plugins: [
     new HTMLPlugin({template: `${__dirname}/src/index.html`}),
@@ -19,7 +19,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel-loader'
+        loader: 'babel-loader',
       },
       {
         test: /\.scss$/,
@@ -35,8 +35,8 @@ module.exports = {
               },
             },
           ],
-        })
+        }),
       },
     ],
-  }
-}
+  },
+};
