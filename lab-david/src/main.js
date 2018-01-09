@@ -27,7 +27,7 @@ class Cowsayer extends React.Component {
   render() {
     return (
       <div>
-        <button className ="text-xs font-semibold rounded-full px-4 py-1 leading-normal bg-white border border-purple text-purple hover:bg-purple hover:text-white" onClick={() => this.saySomething()}> Click me </button>
+        <button className ="text-s font-semibold rounded-full px-4 py-1 leading-normal bg-white border border-black text-black hover:bg-black hover:text-white" onClick={() => this.saySomething()}> Click me </button>
         <pre>{this.state.content}
         </pre>
     </div>
