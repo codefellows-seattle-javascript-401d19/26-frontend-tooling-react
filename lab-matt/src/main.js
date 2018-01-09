@@ -21,11 +21,21 @@ class Cow extends React.Component {
   render() {
     return (
       <div>
+        <pre style={randomColor()} className='cow'>{ say({text: this.state.content}) }</pre>
         <button onClick={this.click}>click me</button>
-        <pre className='cow'>{ say({text: this.state.content}) }</pre>
       </div>
     )
   }
+}
+
+function randomColor() {
+  let color1 = Math.floor(Math.random() * 250);
+  let color2 = Math.floor(Math.random() * 250);
+  let color3 = Math.floor(Math.random() * 250);
+  let styles = {
+    backgroundColor: `rgb(${color1}, ${color2}, ${color3})`,
+  }
+  return styles;
 }
 
 class App extends React.Component {

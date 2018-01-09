@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "watch": "webpack-dev-server --inline --hot",
-    "build": "webpack",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -26,7 +25,6 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "cowsay": "^1.2.1",
-    "cowsay-browser": "^1.1.8",
     "css-loader": "^0.28.8",
     "extract-text-webpack-plugin": "^3.0.2",
     "faker": "^4.1.0",
