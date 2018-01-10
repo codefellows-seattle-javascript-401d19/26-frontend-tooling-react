@@ -1,0 +1,19 @@
+{
+  "name": "26-frontend-tooling-react",
+  "version": "1.0.0",
+  "description": "Lab 26 into to React",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hazzed/26-frontend-tooling-react.git"
+  },
+  "author": "Dalton Carr",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hazzed/26-frontend-tooling-react/issues"
+  },
+  "homepage": "https://github.com/hazzed/26-frontend-tooling-react#readme"
+}
