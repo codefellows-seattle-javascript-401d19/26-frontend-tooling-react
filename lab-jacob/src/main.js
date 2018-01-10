@@ -6,14 +6,14 @@ import ReactDom from 'react-dom';
 import faker from 'faker';
 import * as say from 'cowsay';
 
-class Cow extends React.Component{
+class App extends React.Component{
   constructor(props) {
     super(props);
     
     this.state = {};
 
     this.state.talk = faker.lorem.words(3)
-    this.state.animal = say.DEFAULT
+    this.state.content = say.DEFAULT
 
     this.sayMoreClickButton = this.sayMoreClickButton.bind(this)
     this.changeCowState = this.changeCowState.bind(this)
@@ -24,7 +24,7 @@ class Cow extends React.Component{
   }
 
   changeCowState(){
-   return (!this.state.animal.includes('The Whitespace Dragon')) ? this.setState({animal : say.DRAGON}) : this.setState({animal : say.DEFAULT})
+   return (!this.state.content.includes('The Whitespace Dragon')) ? this.setState({content : say.DRAGON}) : this.setState({content : say.DEFAULT})
   }
  
   render(){
@@ -42,4 +42,4 @@ class Cow extends React.Component{
 
 }
 
-ReactDom.render(<Cow/>, document.getElementById('root'))
+ReactDom.render(<App/>, document.getElementById('root'))
