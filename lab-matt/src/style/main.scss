@@ -1,0 +1,26 @@
+$myPurple: #a12e98;
+$notPurple: #16005e;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $myPurple;
+}
+
+h1 {
+  color: #faddad;
+  background-color: $notPurple
+}
+
+.cow {
+  font-size: 30px;
+  height: 400px;
+}
+
+button {
+  width: 200px;
+  height: 50px;
+}
