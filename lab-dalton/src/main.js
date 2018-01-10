@@ -8,10 +8,10 @@ import faker from 'faker';
 
 class App extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       content: 'YOYOYO?',
-    }
+    };
 
     this.handleClick = this.handleClick.bind(this);
   }
@@ -19,9 +19,9 @@ class App extends React.Component {
   handleClick() {
     this.setState((state) => {
       return {      
-        content: faker.random.words()
-      }
-    })
+        content: faker.random.words(),
+      };
+    });
   }
 
   render() {
@@ -33,7 +33,7 @@ class App extends React.Component {
         <button onClick ={this.handleClick}>click me</button>
         <pre>{cowsay.say({text: this.state.content})}</pre>
       </div>
-    )
+    );
   }
 }
 
