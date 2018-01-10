@@ -1,10 +1,10 @@
 'use strict';
 
-import './style/main.scss'
-import React from 'react'
-import ReactDom from 'react-dom'
-import cowsay from 'cowsay-browser'
-import faker from 'faker'
+import './style/main.scss';
+import React from 'react';
+import ReactDom from 'react-dom';
+import cowsay from 'cowsay-browser';
+import faker from 'faker';
 
 class App extends React.Component {
   constructor(props) {
