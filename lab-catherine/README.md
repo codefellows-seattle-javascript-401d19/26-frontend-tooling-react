@@ -36,6 +36,7 @@ Standard JavaScript with ES6, SASS, CSS, HTML
 * babel-preset-react
 * cowsay-browser
 * css-loader
+* eslint-plugin-react
 * extract-text-webpack-plugin
 * faker
 * html-webpack-plugin
