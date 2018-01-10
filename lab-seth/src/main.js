@@ -34,14 +34,4 @@ class Cowsay extends React.Component {
   }
 }
 
-class App extends React.Component {
-  render() {
-    return (
-      <div>
-        <Cowsay />
-      </div>
-    )
-  }
-}
-
-ReactDom.render(<App />, document.getElementById('root'));
+ReactDom.render(<Cowsay />, document.getElementById('root'));
