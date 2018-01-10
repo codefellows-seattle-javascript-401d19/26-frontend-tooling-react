@@ -1,0 +1,11 @@
+$main-color:  black; 
+
+.body{
+  z-index: -1;
+  background-color: $main-color;
+}
+
+#root{
+  z-index: 1;
+  background-color: white;
+}
