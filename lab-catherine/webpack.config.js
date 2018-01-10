@@ -18,7 +18,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel-loader'
+        loader: 'babel-loader',
       },
       {
         test: /\.scss$/,
@@ -34,9 +34,9 @@ module.exports = {
               },
             },
           ],
-        })
+        }),
       },
     ],
-  }
-}
+  },
+};
 
