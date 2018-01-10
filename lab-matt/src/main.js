@@ -9,22 +9,15 @@ class Cow extends React.Component {
     super(props);
 
     this.state = { content: this.props.content };
-    console.log(this.cow);
-
-    this.click = this.click.bind(this);
-  }
-  
-  click() {
-    this.setState({content: faker.hacker.phrase()});
   }
 
   render() {
     return (
       <div>
-        <pre style={randomColor()} className='cow'>{ say({text: this.state.content}) }</pre>
-        <button onClick={this.click}>click me</button>
+        <pre style={randomColor()} className='cow'>{ say({text: this.props.content}) }</pre>
+        <button onClick={this.props.click}>click me</button>
       </div>
-    )
+    );
   }
 }
 
@@ -34,19 +27,31 @@ function randomColor() {
   let color3 = Math.floor(Math.random() * 250);
   let styles = {
     backgroundColor: `rgb(${color1}, ${color2}, ${color3})`,
-  }
+  };
   return styles;
 }
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = { content: faker.hacker.phrase()};
+    
+    this.click = this.click.bind(this);
+  }
+
+  click() {
+    this.setState({content: faker.hacker.phrase()});
+  }
+
   render() {
     return (
       <div>
         <h1>Generate Cowsay Lorem</h1>
-        <Cow content='Click the Button To Randomize My Text' />
+        <Cow content={this.state.content} click={this.click} />
       </div>
-    )
+    );
   }
 }
 
-ReactDom.render(<App/>, document.getElementById('dump'))
+ReactDom.render(<App/>, document.getElementById('dump'));

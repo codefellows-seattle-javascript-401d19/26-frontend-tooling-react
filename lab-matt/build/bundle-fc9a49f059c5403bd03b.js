@@ -1171,8 +1171,6 @@ var _react2 = _interopRequireDefault(_react);
 
 var _cowsay = __webpack_require__(20);
 
-var _cowsay2 = _interopRequireDefault(_cowsay);
-
 var _faker = __webpack_require__(21);
 
 var _faker2 = _interopRequireDefault(_faker);
@@ -1189,32 +1187,57 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Cowsays = function (_React$Component) {
-  _inherits(Cowsays, _React$Component);
+var Cow = function (_React$Component) {
+  _inherits(Cow, _React$Component);
 
-  function Cowsays(props) {
-    _classCallCheck(this, Cowsays);
+  function Cow(props) {
+    _classCallCheck(this, Cow);
 
-    var _this = _possibleConstructorReturn(this, (Cowsays.__proto__ || Object.getPrototypeOf(Cowsays)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (Cow.__proto__ || Object.getPrototypeOf(Cow)).call(this, props));
 
-    _this.state = { value: _this.props.value };
-    console.log(_this.state);
+    _this.state = { content: _this.props.content };
+
+    _this.click = _this.click.bind(_this);
     return _this;
   }
 
-  _createClass(Cowsays, [{
+  _createClass(Cow, [{
+    key: 'click',
+    value: function click() {
+      this.setState({ content: _faker2.default.hacker.phrase() });
+    }
+  }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
         'div',
-        { className: 'Cow' },
-        (0, _cowsay2.default)(this.state.value)
+        null,
+        _react2.default.createElement(
+          'pre',
+          { style: randomColor(), className: 'cow' },
+          (0, _cowsay.say)({ text: this.state.content })
+        ),
+        _react2.default.createElement(
+          'button',
+          { onClick: this.click },
+          'click me'
+        )
       );
     }
   }]);
 
-  return Cowsays;
+  return Cow;
 }(_react2.default.Component);
+
+function randomColor() {
+  var color1 = Math.floor(Math.random() * 250);
+  var color2 = Math.floor(Math.random() * 250);
+  var color3 = Math.floor(Math.random() * 250);
+  var styles = {
+    backgroundColor: 'rgb(' + color1 + ', ' + color2 + ', ' + color3 + ')'
+  };
+  return styles;
+}
 
 var App = function (_React$Component2) {
   _inherits(App, _React$Component2);
@@ -1231,7 +1254,12 @@ var App = function (_React$Component2) {
       return _react2.default.createElement(
         'div',
         null,
-        _react2.default.createElement(Cowsays, { value: _faker2.default.hacker.phrase() })
+        _react2.default.createElement(
+          'h1',
+          null,
+          'Generate Cowsay Lorem'
+        ),
+        _react2.default.createElement(Cow, { content: 'Click the Button To Randomize My Text' })
       );
     }
   }]);
