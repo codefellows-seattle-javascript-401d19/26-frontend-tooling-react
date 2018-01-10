@@ -8,12 +8,12 @@ import faker from 'faker';
 
 class App extends React.Component {
   constructor(props){
-    super(props)
+    super(props);
 
     this.state = {
-      content: "such moo",
+      content: 'such moo',
       cow: '',
-    }
+    };
 
 
     this.clickHandle = this.clickHandle.bind(this);
@@ -25,22 +25,22 @@ class App extends React.Component {
     this.setState((state) => {
       return {
         content: faker.hacker.phrase(),
-      }
-    })
+      };
+    });
   }
 
   cowMenu(event){
     if (event.target.value === 'COW'){
-      this.setState({cow: ''})
+      this.setState({cow: ''});
     }
     if (event.target.value === 'DAEMON') {
-      this.setState({ cow: cowsay.DAEMON })
+      this.setState({ cow: cowsay.DAEMON });
     }
     if (event.target.value === 'SQUIRREL') {
-      this.setState({ cow: cowsay.SQUIRREL })
+      this.setState({ cow: cowsay.SQUIRREL });
     }
     if (event.target.value === 'DOGE') {
-      this.setState({ cow: cowsay.DOGE })
+      this.setState({ cow: cowsay.DOGE });
     }
 
   }
@@ -60,8 +60,8 @@ class App extends React.Component {
         </select>
         <pre>{cowsay.say({text: this.state.content, cow: this.state.cow})}</pre>
       </div>
-    )
+    );
   }
 }
 
-ReactDom.render(<App/>, document.getElementById('root'))
+ReactDom.render(<App/>, document.getElementById('root'));
