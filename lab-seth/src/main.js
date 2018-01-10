@@ -14,8 +14,6 @@ class Cowsay extends React.Component {
     this.state.content = cowsay.say({
       text: `I am a cow and I will ${faker.hacker.verb(2)} your phone to ${faker.hacker.adjective(2)}!` ,
     });
-    console.log(this.state);
-
   }
 
   changeSaying() {
@@ -29,8 +27,8 @@ class Cowsay extends React.Component {
   render() {
     return (
       <div>
-      <button onClick={() => this.changeSaying()}> Click Here to Say the Cow</button>
-      <pre>{this.state.content}</pre>
+        <button onClick={() => this.changeSaying()}> Click Here to Say the Cow</button>
+        <pre>{this.state.content}</pre>
       </div>
     );
   }

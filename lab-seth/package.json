@@ -23,6 +23,7 @@
     "cowsay": "^1.2.1",
     "css-loader": "^0.28.8",
     "dotenv": "^4.0.0",
+    "eslint-plugin-react": "^7.5.1",
     "express": "^4.16.2",
     "extract-text-webpack-plugin": "^3.0.2",
     "fs-extra": "^5.0.0",
