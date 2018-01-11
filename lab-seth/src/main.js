@@ -6,7 +6,7 @@ import ReactDom from 'react-dom';
 import * as cowsay from 'cowsay';
 import faker from 'faker';
 
-class Cowsay extends React.Component {
+class App extends React.Component {
   constructor(props) {
     super(props);
 
@@ -34,4 +34,4 @@ class Cowsay extends React.Component {
   }
 }
 
-ReactDom.render(<Cowsay />, document.getElementById('root'));
+ReactDom.render(<App />, document.getElementById('root'));
