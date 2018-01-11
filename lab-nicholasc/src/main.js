@@ -3,7 +3,7 @@
 import './style/main.scss';
 import React from 'react';
 import ReactDom from 'react-dom';
-import {say} from 'cowsay';
+import * as cowsay from 'cowsay';
 import faker from 'faker';
 
 class App extends React.Component {
@@ -15,20 +15,21 @@ class App extends React.Component {
   }
 
   saysSomethingNew() {
-    let says = say({
-      text : `I know a man named Nicholas, did you know he ${faker.lorem.words(10)}`
-    });
+    let says = cowsay.say({
+      text : `I know a man named Nicholas, did you know he ${faker.random.words(10)}`,
+      cow : cowsay.STEGOSAURUS});
 
     this.setState({content: says});
   }
 
   render() {
-    return (<button className={'cowsays'}
-    onClick={this.saysSomethingNew}>
-      <pre>{this.state.content}</pre>
-    </button>)
+    return (
+      <button className={'cowsays'}
+        onClick={this.saysSomethingNew}>
+        <pre>{this.state.content}</pre>
+      </button>);
   }
 }
 
 
-ReactDom.render(<App/>, document.getElementById('main'))
+ReactDom.render(<App/>, document.getElementById('main'));
