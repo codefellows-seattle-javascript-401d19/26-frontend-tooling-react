@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "watch": "webpack-dev-server --inline --hot"
+    "watch": "webpack-dev-server --inline --hot",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -38,6 +39,7 @@
     "webpack-dev-server": "^2.10.0"
   },
   "devDependencies": {
+    "eslint": "^4.15.0",
     "eslint-plugin-react": "^7.5.1"
   }
 }
