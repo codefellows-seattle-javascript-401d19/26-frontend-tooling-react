@@ -18,11 +18,7 @@ class App extends React.Component {
   }
 
   handleClick() {
-    this.setState((state) => {
-      return {      
-        content: faker.random.words(),
-      };
-    });
+    this.setState({content: faker.random.words()});
   }
 
   createMenuItems(event) {
